@@ -13,11 +13,32 @@
     var coworkers = {
     "programmer" : "이상용1",
    "designer" : "이상용2"
-    }
+       }
+    coworkers.bookkeeper = "이상용3";
+    coworkers["data scientist"] = "이상용4";
 
-    document.write("programmer : " + coworkers.programmer + "<br>");
-    document.write("designer : " + coworkers.designer + "<br>");
+    // document.write("programmer : " + coworkers.programmer + "<br>");
+   // document.write("designer : " + coworkers.designer + "<br>");
+   // document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+   // document.write("data scientist : " + coworkers["data scientist"] + "<br>"); 
    </script>
+   <h1>객체 반복 연습중</h1>
+   <!-- <script>
+     for(var key in coworkers) {
+      document.write(key + ' : '+ coworkers[key]+ '<br>');
+     }
+   </script> -->
+   <h1>객체 반복 함수 정의 및 사용 연습중2</h1>
+<script>
+coworkers.showAll = function() {
+ for(var key in this) {
+	document.write(key + ' : ' + this[key] + '<br>');
+}
+}
+coworkers.showAll();
+</script>
+
+
 
   <h2>함수 사용2 매개변수 및 인자값 , 리턴값 테스트중.</h2>
   <script>
