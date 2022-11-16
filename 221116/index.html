@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WEB1 - WEB </title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" />
+<script>
+  function nightDayHandler(self) { 
+    //함수를 선언 하는 위치 : 선언부, 매개변수(parameter)
+    // 함수를 구현하는 위치. : 구현부
+    
+    // 함수를 사용할 때 보통 "호출했다. call" -> 함수를 사용할 때, 호출할 때 안에 있는 변수를 
+    // 인자값(argument)
+    var target = document.querySelector('body');
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day'
+    
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                        alist[i].style.color = 'powderblue';
+                        console.log(alist[i]);
+                        i = i + 1;
+                    }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night'
+    
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                        alist[i].style.color = 'blue';
+                        console.log(alist[i]);
+                        i = i + 1;
+                    }
+    
+                }
+    }
+
+</script>
+</head>
+<body>
+
+<h1><a href="index.html">WEB</a></h1>
+<div id="grid">
+
+<ol>
+<li><a href="1.html">HTML</a></li>
+<li><a href="2.html">CSS</a></li>
+<li><a href="3.html">JavaScript</a></li>
+</ol>
+
+<div>
+  <input type="button" value="night" onclick="nightDayHandler(this) "><br>
+<h2>WEB이란 무엇인가?</h2>
+<p style="margin-top: 40px;">
+The World Wide Web (WWW), commonly known as the Web, is the world's dominant software platform.[1] It was
+originally a hypertext document management system[2] accessed over the Internet.[3]
+The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be accessed by users by
+a software application called a web browser, and are published by a software application called a web server.
+Web resources may be any type of downloaded media, but web pages are hypertext documents formatted in
+Hypertext Markup Language (HTML). Special HTML syntax displays embedded hyperlinks with URLs, which permits users
+to navigate to other web resources. In addition to text, web pages may contain references to images, video, audio, and
+software components, which are either displayed or internally executed in the user's web browser to render pages or
+streams of multimedia conten
+</p>
+</div>
+</div>
+</body>
+</html>

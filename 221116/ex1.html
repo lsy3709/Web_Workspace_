@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>자바스크립트의 객체 JSON 확인."키:값" 형태.</h2>
+  <h2>coworkers 라는 변수 이름으로 객체를 선언 테스트중</h2>
+  <script>
+    var coworkers = {
+    "programmer" : "이상용1",
+   "designer" : "이상용2"
+    }
+
+    document.write("programmer : " + coworkers.programmer + "<br>");
+    document.write("designer : " + coworkers.designer + "<br>");
+   </script>
+
+  <h2>함수 사용2 매개변수 및 인자값 , 리턴값 테스트중.</h2>
+  <script>
+    function sum(left, right) {
+     document.write(left+right+'<br>');
+     }
+
+     function sumColorRed(left, right) {
+      document.write('<div style="color: red;">' + left+right+'</div><br>');
+      }
+
+      function sum2(left, right) { 
+        // 함수의 결과값만 따로 재사용을 하기 위해서 
+        //return 키워드를 사용했음. 
+        return left + right
+      }
+
+     sum(2,3);
+     sum(3,4); 
+     sumColorRed(1,100);
+     document.write('sum2 함수를 따로 빼서 사용중. 문자열 결과로 나와서.임의로 변경.');
+     document.write('<div style="color: red">'+ sum2(2,3)+'</div><br>');
+document.write('<div style="font-size: 3rem">'+sum2(2,3)+'</div><br>');
+     </script>
+
+    <h2>함수 사용 테스트중.</h2>
+  <script>
+    function test() { //매개변수가 없음. 함수정의를 하는 부분
+      document.write('<li>반복 확인중 테스트 함수 재사용</li>');
+      document.write('<li>빔이 화질이 안 좋아짐. </li>');
+      }
+    function two() { //매개변수가 없음. 함수정의를 하는 부분
+    document.write('<li>2-1</li>');
+    document.write('<li>2-2</li>');
+    }
+    document.write('<li>1</li>');
+    test();
+    two(); // 함수 사용하는 부분. 인자값.
+    document.write('<li>3</li>');
+    test();
+    two();
+    test();
+    </script>
+
+  <h2>Coworkers3</h2>
+<ul>
+  <script>
+    var coworkers = ["egoing", "leezche", "duru","taeho"];
+    var i = 0;
+    while(i <coworkers.length ) {
+      document.write('<li><a href=http://a.com/'+ coworkers[i] + '>' + coworkers[i] + '</a></li>');
+      console.log(coworkers[i]);
+      i = i + 1;
+    }
+  </script>
+</ul>
+
+  <h2>2, 3번째 코드 3번 반복</h2>
+    <script>
+      document.write('<li>1</li>');
+      var i = 0;
+      while(i<3) {
+        document.write('<li>2</li>');
+        document.write('<li>3</li>');
+        i = i + 1;
+      }
+      document.write('<li>4</li>');
+    </script>
+</body>
+</html>

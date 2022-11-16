@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WEB1 - CSS </title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" />
+<script>
+  function nightDayHandler(self) { 
+    //함수를 선언 하는 위치 : 선언부, 매개변수(parameter)
+    // 함수를 구현하는 위치. : 구현부
+    
+    // 함수를 사용할 때 보통 "호출했다. call" -> 함수를 사용할 때, 호출할 때 안에 있는 변수를 
+    // 인자값(argument)
+    var target = document.querySelector('body');
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day'
+    
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                        alist[i].style.color = 'powderblue';
+                        console.log(alist[i]);
+                        i = i + 1;
+                    }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night'
+    
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                        alist[i].style.color = 'blue';
+                        console.log(alist[i]);
+                        i = i + 1;
+                    }
+    
+                }
+    }
+
+</script>
+</head>
+<body>
+<h1><a href="index.html">WEB</a></h1>
+<div id="grid">
+<ol>
+<li><a href="1.html">HTML</a></li>
+<li><a href="2.html">CSS</a></li>
+<li><a href="3.html">JavaScript</a></li>
+</ol>
+<div>
+  <input type="button" value="night" onclick="nightDayHandler(this) "><br>
+<h2>CSS란 무엇인가?</h2>
+
+<p style="margin-top: 40px;">
+Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
+of the World Wide Web, alongside HTML and JavaScript.[2]
+CSS is designed to enable the separation of presentation and content, including layout,
+colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
+and control in the specification of presentation characteristics; enable multiple web pages to
+share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
+and repetition in the structural content
+</p>
+</div>
+</div>
+</body>
+</html>
